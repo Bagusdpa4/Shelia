@@ -56,7 +56,7 @@ export const IdleOverlay = () => {
           <video
             ref={videoRef}
             autoPlay
-            muted
+            // muted
             loop
             playsInline
             className="absolute inset-0 h-full w-full object-cover opacity-80"
