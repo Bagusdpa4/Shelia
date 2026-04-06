@@ -20,8 +20,10 @@
     /* Warna Kustom */
     --color-white: #FFFFFF;
     --color-black: #191C1E;
-    --color-primary: #005AB6;
+    --color-primary: #010A63;
     --color-secondary: #F2F4F6;
+    --color-primary2: #96C8FF1A;
+    --color-secondary2: #363F8E;
   }
 
 @theme inline {
@@ -51,7 +53,7 @@
     --color-secondary-foreground: var(--secondary-foreground);
     --color-secondary: var(--secondary);
     --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
+    --color-primary: #010A63;
     --color-popover-foreground: var(--popover-foreground);
     --color-popover: var(--popover);
     --color-card-foreground: var(--card-foreground);

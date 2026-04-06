@@ -3,17 +3,35 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Pages
 import { Homepage } from "../pages/Homepage";
-import { Error404 } from "../pages/Error404";
+import { Menu } from "../pages/templates/Menu";
+import { HowItWorks } from "../pages/features/HowItWorks";
+import { AllFeatures } from "../pages/features/AllFeatures";
+import { Error404 } from "../pages/errors/Error404";
+
+// Components
+import { IdleOverlay } from "../components/assets/idle/IdleOverlay";
+import { AnimatePresence } from "framer-motion";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
+      <IdleOverlay />
+      <AnimatePresence mode="wait">
+        <Routes>
+          {/* Home */}
+          <Route path="/" element={<Homepage />} />
 
-        {/* Error */}
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+          {/* Menu */}
+          <Route path="/menu" element={<Menu />} />
+
+          {/* Features */}
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/all-features" element={<AllFeatures />} />
+
+          {/* Error */}
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </AnimatePresence>
     </BrowserRouter>
   );
 };
