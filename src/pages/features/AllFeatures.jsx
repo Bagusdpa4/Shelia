@@ -95,8 +95,8 @@ export const AllFeatures = () => {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white py-12 font-sans">
       {/* Background Decor - Lingkaran Blur Halus */}
-      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
-      <div className="pointer-events-none absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
 
       <div className="flex w-full max-w-7xl flex-col items-center">
         {/* Header Section */}

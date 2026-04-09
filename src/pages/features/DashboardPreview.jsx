@@ -35,8 +35,8 @@ export const DashboardPreview = () => {
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white py-10 font-sans"
     >
       {/* Background Decor */}
-      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
-      <div className="pointer-events-none absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
+      <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
 
       <div className="flex w-full max-w-6xl flex-col items-center px-6">
         {/* Header Section dengan Fade Up */}

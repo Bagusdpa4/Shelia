@@ -49,8 +49,8 @@ export const HowItWorks = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-white px-6 py-8 font-sans lg:px-16 lg:py-24 xl:px-10 xl:py-16">
       {/* 1. Background Decor - Ditaruh di luar Card supaya tidak kena overflow-hidden */}
-      <div className="lg:h-120 lg:w-120 absolute -right-10 -top-10 h-64 w-64 rounded-full bg-blue-300/20 blur-[80px]" />
-      <div className="lg:h-100 lg:w-100 absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-sky-300/20 blur-[80px]" />
+      <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-sky-200 blur-[120px]" />
 
       {/* Header Halaman */}
       <div className="mb-10 text-center lg:mb-20 xl:mb-16">
@@ -100,7 +100,10 @@ export const HowItWorks = () => {
             {/* Phone Frame Section */}
             <div className="flex w-full flex-1 justify-center">
               <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
-                <PhoneFrame screenshot={item.image} />
+                <PhoneFrame
+                  screenshot={item.image}
+                  decorPosition={index % 2 === 0 ? "right" : "left"}
+                />
               </div>
             </div>
           </motion.div>

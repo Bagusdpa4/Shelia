@@ -51,8 +51,8 @@ export const Menu = () => {
       className="relative flex min-h-screen w-full select-none flex-col items-center justify-center overflow-hidden bg-white p-6 font-sans"
     >
       {/* 1. Background Decor - Ditaruh di luar Card supaya tidak kena overflow-hidden */}
-      <div className="lg:h-120 lg:w-120 absolute -right-10 -top-10 h-64 w-64 rounded-full bg-blue-300/20 blur-[80px]" />
-      <div className="lg:h-100 lg:w-100 absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-sky-300/20 blur-[80px]" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-blue-300/20 blur-[80px]" />
 
       {/* Container Menu Utama */}
       <motion.div
