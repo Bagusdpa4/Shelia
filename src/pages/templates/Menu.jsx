@@ -32,13 +32,13 @@ export const Menu = () => {
       bgIcon: "bg-[#DFE0FF]",
       path: "/dashboard-preview",
     },
-    {
-      title: "View Plans",
-      desc: "Choose the right path for your exhibition journey.",
-      icon: <FaMoneyBills />,
-      bgIcon: "bg-[#96C8FF]",
-      path: "/view-plans",
-    },
+    // {
+    //   title: "View Plans",
+    //   desc: "Choose the right path for your exhibition journey.",
+    //   icon: <FaMoneyBills />,
+    //   bgIcon: "bg-[#96C8FF]",
+    //   path: "/view-plans",
+    // },
   ];
 
   return (
@@ -88,13 +88,13 @@ export const Menu = () => {
             >
               <div className="flex items-center gap-4 lg:gap-8 xl:gap-6">
                 <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-xl lg:h-20 lg:w-20 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                  className={`lg:w-30 flex h-10 w-10 items-center justify-center rounded-xl lg:h-36 xl:h-12 xl:w-12 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
-                    className: "text-lg xl:text-2xl text-primary lg:text-5xl",
+                    className: "text-lg xl:text-2xl text-primary lg:text-7xl",
                   })}
                 </div>
-                <div className="text-left">
+                <div className="text-left pr-10">
                   <h3 className="text-base font-bold text-black lg:text-[54px] lg:font-bold xl:text-lg xl:font-bold">
                     {item.title}
                   </h3>
