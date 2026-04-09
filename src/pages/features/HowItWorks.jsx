@@ -97,22 +97,11 @@ export const HowItWorks = () => {
               </p>
             </div>
 
-            {/* Bagian Gambar (Mockup HP) */}
+            {/* Phone Frame Section */}
             <div className="flex w-full flex-1 justify-center">
-              <div className="max-w-62.5 lg:max-w-120 xl:max-w-65 w-full">
-                <PhoneFrame
-                  screenshot={item.image}
-                />
+              <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
+                <PhoneFrame screenshot={item.image} />
               </div>
-              {/* <div className="relative">
-                <div className="absolute inset-0 scale-90 rounded-full bg-blue-400/20 blur-3xl" />
-
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="lg:w-120 relative z-10 w-64 drop-shadow-2xl transition-transform duration-500 hover:scale-105 xl:w-80"
-                />
-              </div> */}
             </div>
           </motion.div>
         ))}

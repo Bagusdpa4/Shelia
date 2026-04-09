@@ -17,7 +17,7 @@ export const PhoneFrame = ({ children, screenshot }) => {
           <img
             src={screenshot}
             alt="App Screenshot"
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 z-30">{children}</div>     
         </div>
