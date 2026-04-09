@@ -57,7 +57,7 @@ export const HowItWorks = () => {
         <h1 className="text-primary text-2xl font-black tracking-tight lg:text-6xl xl:text-3xl">
           HOW IT WORKS
         </h1>
-        <p className="font-semi-bold mt-4 text-sm text-slate-500 lg:mt-8 lg:text-4xl xl:mt-2 xl:text-lg">
+        <p className="font-medium mt-4 text-sm text-black lg:mt-8 lg:text-4xl xl:mt-2 xl:text-lg">
           Alur kerja SHELIA dalam mengelola operasional cleaning
         </p>
       </div>
@@ -77,7 +77,7 @@ export const HowItWorks = () => {
           >
             {/* Bagian Teks */}
             <div className="flex-1 space-y-4 text-left">
-              <span className="text-primary inline-block rounded-full bg-blue-200 px-6 py-2 text-sm font-bold lg:text-2xl xl:text-lg">
+              <span className="text-primary inline-block rounded-full bg-blue-200 px-6 py-2 text-sm font-bold lg:text-4xl xl:text-lg">
                 {item.step}
               </span>
               <h2
