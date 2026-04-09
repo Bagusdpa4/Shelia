@@ -100,10 +100,7 @@ export const HowItWorks = () => {
             {/* Phone Frame Section */}
             <div className="flex w-full flex-1 justify-center">
               <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
-                <PhoneFrame
-                  screenshot={item.image}
-                  decorPosition={index % 2 === 0 ? "right" : "left"}
-                />
+                <PhoneFrame screenshot={item.image} />
               </div>
             </div>
           </motion.div>

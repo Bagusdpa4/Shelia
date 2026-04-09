@@ -1,24 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const PhoneFrame = ({
-  children,
-  screenshot,
-  decorPosition = "right",
-}) => {
+export const PhoneFrame = ({ children, screenshot }) => {
   return (
     <div className="lg:max-w-120 xl:max-w-70 pointer-events-none relative z-10 mx-auto w-full max-w-60">
-      {(decorPosition === "left" || decorPosition === "right") && (
-        <>
-          <div
-            className={`absolute -z-10 h-40 w-40 rounded-full bg-sky-200 blur-[100px] ${decorPosition === "left" ? "-left-20 -top-10" : "-right-20 -top-10"}`}
-          />
-          <div
-            className={`absolute -z-10 h-40 w-40 rounded-full bg-sky-200 blur-[100px] ${decorPosition === "left" ? "-left-10 top-10" : "-right-10 top-10"}`}
-          />
-        </>
-      )}
-
       <motion.div
         whileHover={{ y: -10 }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -43,7 +28,7 @@ export const PhoneFrame = ({
       <div className="absolute -right-1 top-28 h-12 w-1 rounded-r-md bg-slate-800 lg:-right-2 lg:top-48 lg:h-28 lg:w-1.5 xl:-right-1 xl:top-32 xl:h-16" />
 
       {/* Glow Effect statis bawaan */}
-      <div className="absolute inset-0 -z-30 scale-95 bg-blue-500/10 blur-[60px] lg:blur-[100px]" />
+      <div className="absolute animate-pulse inset-0 -z-30 scale-95 bg-sky-200 blur-[80px]" />
     </div>
   );
 };
