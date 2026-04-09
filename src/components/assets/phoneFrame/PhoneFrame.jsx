@@ -13,11 +13,11 @@ export const PhoneFrame = ({ children, screenshot }) => {
         <div className="absolute left-1/2 top-0 z-40 h-4 w-20 -translate-x-1/2 rounded-b-xl bg-slate-900 lg:h-8 lg:w-28 xl:h-5 xl:w-20"></div>
 
         {/* Screen */}
-        <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-white pt-4 lg:rounded-[2.8rem] xl:rounded-[2.2rem]">
+        <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-red-500 pt-4 lg:rounded-[2.8rem] xl:rounded-[2.2rem]">
           <img
             src={screenshot}
             alt="App Screenshot"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-top"
           />
           <div className="absolute inset-0 z-30">{children}</div>     
         </div>
