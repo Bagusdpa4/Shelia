@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 
 export const DashboardPreview = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
 
   // Variasi animasi untuk container utama
   const containerVariants = {
