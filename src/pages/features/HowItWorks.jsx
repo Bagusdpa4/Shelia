@@ -102,7 +102,6 @@ export const HowItWorks = () => {
               <div className="max-w-62.5 lg:max-w-120 xl:max-w-65 w-full">
                 <PhoneFrame
                   screenshot={item.image}
-                  stepNumber={item.step.split(" ")[1]}
                 />
               </div>
               {/* <div className="relative">

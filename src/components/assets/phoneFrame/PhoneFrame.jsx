@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const PhoneFrame = ({ children, screenshot, stepNumber }) => {
+export const PhoneFrame = ({ children, screenshot }) => {
   return (
     <div className="lg:max-w-120 xl:max-w-70 relative mx-auto w-full max-w-60">
       <motion.div
