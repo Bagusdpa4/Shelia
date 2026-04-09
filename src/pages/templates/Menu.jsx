@@ -51,7 +51,7 @@ export const Menu = () => {
       className="relative flex min-h-screen w-full select-none flex-col items-center justify-center overflow-hidden bg-white p-6 font-sans"
     >
       {/* 1. Background Decor - Ditaruh di luar Card supaya tidak kena overflow-hidden */}
-      <div className="lg:h-120 lg:w-120 absolute -right-10 -top-10 h-64 w-64 rounded-full bg-blue-400/20 blur-[80px]" />
+      <div className="lg:h-120 lg:w-120 absolute -right-10 -top-10 h-64 w-64 rounded-full bg-blue-300/20 blur-[80px]" />
       <div className="lg:h-100 lg:w-100 absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-sky-300/20 blur-[80px]" />
 
       {/* Container Menu Utama */}
@@ -110,36 +110,34 @@ export const Menu = () => {
       </motion.div>
 
       {/* Navigation Bar Bawah */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        className="mt-10 flex items-center gap-6 rounded-full border border-slate-100 bg-white p-2 shadow-lg lg:mt-16 lg:gap-10 lg:p-6 xl:mt-10 xl:gap-6 xl:p-4"
-      >
-        <button
-          onClick={() => navigate(-1)}
-          className="hover:text-primary flex cursor-pointer flex-col items-center gap-1 px-1 text-slate-400 transition-colors lg:gap-4 lg:px-8 xl:gap-2 xl:px-2"
+      <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="flex items-center gap-6 p-3 lg:gap-8 lg:p-6 xl:gap-4 xl:p-4"
         >
-          <FaArrowLeft className="text-lg lg:text-5xl xl:text-xl" />
-          <span className="text-[10px] font-bold uppercase lg:text-2xl xl:text-[12px]">
-            Back
-          </span>
-        </button>
+          <button
+            onClick={() => navigate(-1)}
+            className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
+          >
+            <FaArrowLeft className="group-hover:text-primary text-lg text-slate-500 lg:text-4xl xl:text-xl" />
+            <span className="group-hover:text-primary text-sm font-bold uppercase text-slate-500 lg:text-2xl xl:text-base">
+              Kembali
+            </span>
+          </button>
 
-        <button
-          onClick={() => navigate("/")}
-          className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
-        >
-          <FaHome className="text-xl lg:text-6xl xl:text-2xl" />
-        </button>
+          <div className="h-8 w-1 bg-slate-200 lg:h-16" />
 
-        <button className="flex cursor-not-allowed flex-col items-center gap-1 px-1 text-slate-400 transition-colors lg:gap-4 lg:px-8 xl:gap-2 xl:px-2">
-          <FaArrowRight className="text-lg lg:text-5xl xl:text-xl" />
-          <span className="text-[10px] font-bold uppercase lg:text-2xl xl:text-[12px]">
-            Next
-          </span>
-        </button>
-      </motion.div>
+          <button
+            onClick={() => navigate("/")}
+            className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
+          >
+            <FaHome className="text-xl lg:text-5xl xl:text-2xl" />
+          </button>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

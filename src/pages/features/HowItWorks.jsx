@@ -20,41 +20,38 @@ export const HowItWorks = () => {
       step: "STEP 01",
       title: "MCP Perencanaan Jadwal",
       desc: "Menyusun jadwal kerja cleaning secara terstruktur untuk setiap area dan periode tertentu.",
-      image: "/step/step01.png",
+      image: "/step/Step01.png",
       bgColor: "text-sky-400",
     },
     {
       step: "STEP 02",
       title: "Penugasan Operasional",
       desc: "Menugaskan pekerjaan kepada petugas sesuai jadwal dan kebutuhan operasional.",
-      image: "/step/step02.png",
+      image: "/step/Step02.png",
       bgColor: "text-sky-400",
     },
     {
       step: "STEP 03",
       title: "Monitoring Real-time",
       desc: "Memantau status kebersihan dan kinerja petugas secara langsung melalui dashboard.",
-      image: "/step/step03.png",
+      image: "/step/Step03.png",
       bgColor: "text-sky-400",
     },
     {
       step: "STEP 04",
-      title: "",
-      desc: "",
-      image: "/step/step04.png",
-      bgColor: "text-sky-400",
-    },
-    {
-      step: "STEP 05",
-      title: "",
-      desc: "",
-      image: "/step/step05.png",
+      title: "Evaluasi Data-Driven",
+      desc: "Melakukan evaluasi berbasis data untuk meningkatkan kualitas dan efisiensi kerja.",
+      image: "/step/Step04.png",
       bgColor: "text-sky-400",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white px-6 py-8 font-sans lg:px-16 lg:py-24 xl:px-10 xl:py-16">
+    <div className="relative min-h-screen overflow-hidden bg-white px-6 py-8 font-sans lg:px-16 lg:py-24 xl:px-10 xl:py-16">
+      {/* 1. Background Decor - Ditaruh di luar Card supaya tidak kena overflow-hidden */}
+      <div className="lg:h-120 lg:w-120 absolute -right-10 -top-10 h-64 w-64 rounded-full bg-blue-300/20 blur-[80px]" />
+      <div className="lg:h-100 lg:w-100 absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-sky-300/20 blur-[80px]" />
+
       {/* Header Halaman */}
       <div className="mb-10 text-center lg:mb-20 xl:mb-16">
         <h1 className="text-primary text-2xl font-black tracking-tight lg:text-6xl xl:text-3xl">

@@ -10,7 +10,7 @@ export const Homepage = () => {
       // 2. Tambahkan properti animasi
       initial={{ opacity: 0, scale: 1.05 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }} 
+      exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] }}
       className="relative flex min-h-screen w-full select-none flex-col items-center justify-center overflow-hidden bg-white px-6 font-sans"
       onClick={() => navigate("/menu")}
@@ -28,7 +28,7 @@ export const Homepage = () => {
         className="relative z-10 flex flex-col items-center text-center"
       >
         {/* Logo Icon (Hexagon Abstract) */}
-        <div className="mb-8 flex h-32 w-32 items-center justify-center lg:h-80 lg:w-80 xl:h-40 xl:w-40">
+        <div className="lg:h-120 lg:w-120 mb-8 flex h-32 w-32 items-center justify-center xl:h-40 xl:w-40">
           <img
             src="/Shelia.png"
             alt="Shelia Logo"
