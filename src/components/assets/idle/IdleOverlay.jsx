@@ -59,10 +59,16 @@ export const IdleOverlay = () => {
             // muted
             loop
             playsInline
+            onLoadStart={() => console.log("⏳ Video: Start loading...")}
+            onCanPlay={() => console.log("✅ Video: Ready to play (buffered).")}
+            onPlay={() => console.log("▶️ Video: Attempting to play...")}
+            onPlaying={() => console.log("🎬 Video: Currently playing (Running).")}
+            onWaiting={() => console.warn("⚠️ Video: Buffering/Waiting...")}
+            onError={(e) => console.error("❌ Video Error:", e)}
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
             {/* Path langsung ke root jika file ada di /public/Intro.mp4 */}
-            <source src="https://drive.google.com/file/d/10bTG19NINDqGN-kPmSneMTn1uwy4Zqtm/view?usp=drive_link" type="video/mp4" />
+            <source src="/Cleaning.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
