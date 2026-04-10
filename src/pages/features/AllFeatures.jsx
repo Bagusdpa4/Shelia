@@ -9,6 +9,7 @@ import {
   MdAssignment,
   MdInventory,
   MdFactCheck,
+  MdFeedback,
 } from "react-icons/md";
 
 export const AllFeatures = () => {
@@ -83,6 +84,23 @@ export const AllFeatures = () => {
           title: "Stock Opname",
           // subtitle: "Audit stok jadi lebih cepat dan akurat.",
           image: "/features/Stock Opname.png",
+          list: [
+            //   "Scan barcode",
+            //   "Rekonsiliasi data",
+            //   "Laporan selisih",
+            //   "Approval digital",
+          ],
+        },
+      ],
+    },
+    {
+      id: "Feedback",
+      icon: <MdFeedback />,
+      contents: [
+        {
+          title: "Feedback",
+          // subtitle: "Audit stok jadi lebih cepat dan akurat.",
+          image: "/features/Feedback.png",
           list: [
             //   "Scan barcode",
             //   "Rekonsiliasi data",
