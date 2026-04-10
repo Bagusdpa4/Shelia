@@ -16,7 +16,7 @@ export const IdleOverlay = () => {
     // Set timer ke 30 detik idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 30000);
+    }, 3000);
   };
 
   const handleExitIdle = () => {
@@ -62,7 +62,7 @@ export const IdleOverlay = () => {
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
             {/* Path langsung ke root jika file ada di /public/Intro.mp4 */}
-            <source src="/intro.mp4" type="video/mp4" />
+            <source src="https://drive.google.com/file/d/10bTG19NINDqGN-kPmSneMTn1uwy4Zqtm/view?usp=drive_link" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
