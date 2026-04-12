@@ -32,13 +32,13 @@ export const Menu = () => {
       bgIcon: "bg-[#DFE0FF]",
       path: "/dashboard-preview",
     },
-    // {
-    //   title: "View Plans",
-    //   desc: "Choose the right path for your exhibition journey.",
-    //   icon: <FaMoneyBills />,
-    //   bgIcon: "bg-[#96C8FF]",
-    //   path: "/view-plans",
-    // },
+    {
+      title: "Request Demo",
+      desc: "Choose the right path for your exhibition journey.",
+      icon: <FaMoneyBills />,
+      bgIcon: "bg-[#96C8FF]",
+      path: "/req-demo",
+    },
   ];
 
   return (

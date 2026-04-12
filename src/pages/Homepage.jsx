@@ -54,7 +54,24 @@ export const Homepage = () => {
           </span>
 
           {/* Animated Pulse Dot */}
-          <div className="mt-2 h-2 w-2 animate-ping rounded-full bg-sky-400 lg:mt-4 lg:h-5 lg:w-5 xl:mt-2 xl:h-3 xl:w-3"></div>
+          <div className="mt-2 flex gap-2 lg:mt-4 xl:mt-2">
+            {[0, 1, 2].map((index) => (
+              <motion.div
+                key={index}
+                animate={{
+                  opacity: [0.2, 1, 0.2],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: index * 0.2,
+                  ease: "easeInOut",
+                }}
+                className="h-2 w-2 rounded-full bg-sky-400 lg:h-5 lg:w-5 xl:h-3 xl:w-3"
+              />
+            ))}
+          </div>
+          {/* <div className="mt-2 h-2 w-2 animate-ping rounded-full bg-sky-400 lg:mt-4 lg:h-5 lg:w-5 xl:mt-2 xl:h-3 xl:w-3"></div> */}
         </div>
       </motion.div>
 
