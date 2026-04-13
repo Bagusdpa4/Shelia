@@ -69,7 +69,7 @@ export const Menu = () => {
         {/* Header Section */}
         <div className="py-6 text-center lg:py-20 xl:py-6">
           <h1 className="py-2 text-xl font-black tracking-tight text-black lg:py-4 lg:text-7xl xl:py-2 xl:text-3xl">
-            SHELIA
+            Shelter Cleaning
           </h1>
           <p className="text-sm font-semibold text-slate-500 lg:text-4xl xl:text-lg">
             Experience Excellence in Curation

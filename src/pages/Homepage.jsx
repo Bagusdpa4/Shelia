@@ -37,8 +37,8 @@ export const Homepage = () => {
         </div>
 
         {/* Brand Name */}
-        <h1 className="text-primary text-5xl font-black tracking-[0.15em] lg:text-9xl xl:text-7xl">
-          SHELIA
+        <h1 className="text-primary text-5xl font-black tracking-[0.15em] lg:text-8xl xl:text-7xl">
+          Shelter Cleaning
         </h1>
 
         {/* Subtitle */}

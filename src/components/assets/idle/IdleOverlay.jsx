@@ -56,7 +56,7 @@ export const IdleOverlay = () => {
           <video
             ref={videoRef}
             autoPlay
-            // muted
+            muted
             loop
             playsInline
             onLoadStart={() => console.log("⏳ Video: Start loading...")}
