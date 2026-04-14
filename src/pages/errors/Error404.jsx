@@ -33,11 +33,11 @@ export const Error404 = () => {
         {/* Text Content */}
         <div className="-mt-8 flex flex-col items-center gap-4 lg:-mt-10 lg:gap-10 xl:-mt-12 xl:gap-4">
           <h2 className="text-2xl font-black uppercase italic tracking-widest text-black lg:text-5xl">
-            Halaman <span className="text-primary">Tidak Ditemukan</span>
+            Page <span className="text-primary">Not Found</span>
           </h2>
           <p className="max-w-md text-sm font-medium text-slate-500 lg:text-3xl xl:text-lg">
-            Maaf, sepertinya halaman yang Anda cari telah dipindahkan atau tidak
-            lagi tersedia dalam ekosistem kami.
+            Sorry, it looks like the page you're looking for has moved or is no
+            longer available in our ecosystem.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export const Error404 = () => {
             asChild
             className="text-md hover:bg-white! group mt-12 flex h-auto cursor-pointer items-center gap-4 rounded-3xl border-2 border-black bg-black px-10 py-4 font-bold text-white transition-all hover:text-black active:scale-95 lg:px-12 lg:py-8 lg:text-3xl xl:px-8 xl:py-5 xl:text-xl"
           >
-            <a href="/">Kembali ke Homepage</a>
+            <a href="/">Back to Homepage</a>
           </Button>
         </div>
       </div>

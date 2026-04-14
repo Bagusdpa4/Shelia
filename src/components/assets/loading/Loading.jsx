@@ -14,7 +14,7 @@ export const Loading = () => {
         {/* Teks Loading dengan Font Poppins */}
         <div className="flex flex-col items-center gap-1">
           <span className="xl:text-md text-sm font-black uppercase tracking-[0.3em] text-black lg:text-3xl">
-            Mohon Tunggu
+            Please Wait
           </span>
           <div className="bg-primary h-1 w-12 animate-pulse rounded-full lg:h-4 lg:w-40 xl:h-1 xl:w-16"></div>
         </div>
