@@ -86,7 +86,7 @@ export const RequestDemo = () => {
 
         {/* Sales Contact Card */}
         <div className="mt-12 flex w-full max-w-sm items-center gap-4 rounded-2xl border border-slate-100 bg-[#DFE0FF] p-4 text-left lg:mt-20 lg:max-w-6xl lg:gap-8 lg:p-8 xl:mt-10 xl:max-w-md xl:gap-4 xl:p-4">
-          <div className="bg-primary lg:h-30 lg:w-30 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white lg:rounded-2xl xl:h-12 xl:w-12">
+          <div className="bg-primary lg:h-30 lg:w-30 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white lg:rounded-full xl:h-12 xl:w-12">
             <FaPhoneAlt className="text-sm lg:text-5xl xl:text-lg" />
           </div>
           <div>
