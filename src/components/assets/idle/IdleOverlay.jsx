@@ -13,10 +13,10 @@ export const IdleOverlay = () => {
     setIsIdle(false);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-    // Set timer ke 30 detik idle
+    // Set timer ke 45 detik idle
     timeoutRef.current = setTimeout(() => {
       setIsIdle(true);
-    }, 30000);
+    }, 45000);
   };
 
   const handleExitIdle = () => {
