@@ -87,15 +87,15 @@ export const Menu = () => {
               onClick={() => navigate(item.path)}
               className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-300 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-[3rem] lg:p-8 xl:rounded-[2rem] xl:p-5"
             >
-              <div className="flex items-center gap-4 lg:gap-8 xl:gap-6">
+              <div className="flex items-center gap-4 lg:gap-8 xl:gap-0">
                 <div
-                  className={`lg:h-30 flex h-10 w-10 items-center justify-center rounded-xl lg:w-60 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                  className={`lg:h-30 flex h-10 w-10 items-center justify-center rounded-xl lg:w-60 xl:h-16 xl:w-20 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
-                    className: "text-lg xl:text-2xl text-primary lg:text-7xl",
+                    className: "text-lg xl:text-3xl text-primary lg:text-7xl",
                   })}
                 </div>
-                <div className="space-y-4 px-4 text-left">
+                <div className="space-0 lg:space-y-4 xl:space-y-1 px-4 text-left">
                   <h3 className="text-base font-bold text-black lg:text-5xl lg:font-bold xl:text-lg xl:font-bold">
                     {item.title}
                   </h3>
@@ -104,7 +104,7 @@ export const Menu = () => {
                   </p>
                 </div>
               </div>
-              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-9xl xl:block xl:text-2xl" />
+              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-9xl xl:block xl:text-5xl" />
             </motion.button>
           ))}
         </div>
