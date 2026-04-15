@@ -238,7 +238,7 @@ export const WhatIs = () => {
           </section>
 
           {/* CONCLUSION */}
-          <section className="pb-10 text-left">
+          <section className="pb-20 text-left">
             <p className="text-primary text-justify text-xl font-bold leading-snug lg:text-5xl xl:text-2xl">
               Shelter Cleaning helps companies move from conventional cleaning
               operations into a more modern and controlled service model
