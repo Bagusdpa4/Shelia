@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaHome, FaRobot, FaUserFriends } from "react-icons/fa";
+import { FaArrowLeft, FaHome, FaRobot } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { IoReceipt } from "react-icons/io5";
 import { CiMapPin } from "react-icons/ci";

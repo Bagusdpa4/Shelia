@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaHome, FaPhoneAlt } from "react-icons/fa";
+import { FaArrowLeft, FaHome } from "react-icons/fa";
 
 export const RequestDemo = () => {
   const navigate = useNavigate();
