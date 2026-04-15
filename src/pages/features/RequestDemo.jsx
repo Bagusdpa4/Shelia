@@ -45,9 +45,9 @@ export const RequestDemo = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center text-center"
+        className="relative z-10 flex flex-col items-center pt-2 text-center lg:pt-20 xl:pt-4"
       >
-        <div className="mb-12 mt-0 lg:mt-20 xl:mt-0 flex w-full justify-center lg:mb-20 xl:mb-6">
+        <div className="mb-12 mt-0 flex w-full justify-center lg:mb-20 lg:mt-20 xl:mb-6 xl:mt-0">
           <h1 className="text-primary text-2xl font-black tracking-tight lg:text-8xl xl:text-3xl">
             Shelter Cleaning
           </h1>
