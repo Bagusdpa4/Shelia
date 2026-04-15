@@ -42,7 +42,7 @@ export const Homepage = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-secondary2 mt-2 text-sm font-medium uppercase tracking-[0.2em] lg:text-4xl xl:text-2xl">
+        <p className="text-secondary2 mt-6 text-sm font-semibold uppercase tracking-[0.2em] lg:text-4xl xl:text-2xl">
           Cleaning Management System
         </p>
 

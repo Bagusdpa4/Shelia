@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHome } from "react-icons/fa";
-import { IoGridOutline, IoBulbSharp } from "react-icons/io5";
-import { FaRocket, FaArrowLeft } from "react-icons/fa6";
+import { FaHome, FaRegLightbulb } from "react-icons/fa";
+import { IoGridOutline, IoRocketOutline } from "react-icons/io5";
+import { FaArrowLeft } from "react-icons/fa6";
 import { HiChevronRight } from "react-icons/hi";
-import { GiBroom } from "react-icons/gi";
+import { PiBroom } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
 export const Menu = () => {
@@ -13,29 +13,25 @@ export const Menu = () => {
   const menuItems = [
     {
       title: "What is Shelter Cleaning ?",
-      desc: "Discover our philosophy of clinical curation and meticulous environmental management.",
-      icon: <GiBroom />,
+      icon: <PiBroom />,
       bgIcon: "bg-slate-200",
       path: "/what-is",
     },
     {
-      title: "What this can do",
-      desc: "Explore dynamic workflows designed to automate and elevate your operational standards.",
-      icon: <IoBulbSharp />,
+      title: "How it Works",
+      icon: <FaRegLightbulb />,
       bgIcon: "bg-slate-200",
       path: "/how-it-works",
     },
     {
       title: "All Features",
-      desc: "A comprehensive overview of our platform capabilities and specialized modules.",
       icon: <IoGridOutline />,
       bgIcon: "bg-slate-200",
       path: "/all-features",
     },
     {
       title: "Request Demo",
-      desc: "Transform your facility today. Get a tailored walkthrough of the SHELIA ecosystem.",
-      icon: <FaRocket />,
+      icon: <IoRocketOutline />,
       bgIcon: "bg-slate-200",
       path: "/req-demo",
     },
@@ -64,16 +60,15 @@ export const Menu = () => {
           ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier untuk efek 'out-expo'
           delay: 0.1,
         }}
-        className="relative z-10 w-full max-w-sm overflow-hidden p-0 backdrop-blur-md lg:max-w-5xl lg:p-8 xl:max-w-lg xl:p-4"
+        className="relative z-10 w-full max-w-sm overflow-hidden p-0 backdrop-blur-md lg:max-w-5xl lg:p-6 xl:max-w-lg xl:p-4"
       >
         {/* Header Section */}
         <div className="py-6 text-center lg:py-20 xl:py-6">
-          <h1 className="py-2 text-xl font-black tracking-tight text-black lg:py-4 lg:text-8xl xl:py-2 xl:text-3xl">
+          <h1 className="py-2 text-xl font-black tracking-tight text-black lg:py-10 lg:text-8xl xl:py-2 xl:text-3xl">
             Shelter Cleaning
           </h1>
           <p className="text-sm font-semibold text-slate-500 lg:text-4xl xl:text-lg">
-            Experience Excellence in Curation. High-end precision and impeccable
-            care for modern professional environments.
+            Smarter and more organized cleaning service operations
           </p>
         </div>
 
@@ -85,26 +80,23 @@ export const Menu = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate(item.path)}
-              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-300 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-[3rem] lg:p-8 xl:rounded-[2rem] xl:p-5"
+              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-300 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-[3rem] lg:p-8 xl:rounded-[2rem] xl:p-4"
             >
               <div className="flex items-center gap-4 lg:gap-8 xl:gap-0">
                 <div
-                  className={`lg:h-30 flex h-10 w-10 items-center justify-center rounded-xl lg:w-60 xl:h-16 xl:w-20 ${item.bgIcon}`}
+                  className={`lg:h-30 flex h-10 w-10 items-center justify-center rounded-xl lg:w-32 xl:h-10 xl:w-16 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
-                    className: "text-lg xl:text-3xl text-primary lg:text-7xl",
+                    className: "text-lg xl:text-2xl text-primary lg:text-7xl",
                   })}
                 </div>
-                <div className="space-0 lg:space-y-4 xl:space-y-1 px-4 text-left">
+                <div className="space-0 px-4 text-left lg:space-y-4 xl:space-y-1">
                   <h3 className="text-base font-bold text-black lg:text-5xl lg:font-bold xl:text-lg xl:font-bold">
                     {item.title}
                   </h3>
-                  <p className="text-xs font-semibold text-slate-500 lg:text-4xl xl:text-sm">
-                    {item.desc}
-                  </p>
                 </div>
               </div>
-              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-9xl xl:block xl:text-5xl" />
+              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-7xl xl:block xl:text-3xl" />
             </motion.button>
           ))}
         </div>

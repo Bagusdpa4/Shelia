@@ -3,18 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneFrame } from "../../components/assets/phoneFrame/PhoneFrame";
 import { FeatureTabs } from "../../components/assets/features/FeatureTabs";
-import { FaArrowLeft, FaHome, FaCheckCircle } from "react-icons/fa";
 import {
-  MdDashboard,
-  MdAssignment,
-  MdInventory,
-  MdFactCheck,
-  MdFeedback,
-} from "react-icons/md";
+  FaArrowLeft,
+  FaHome,
+  FaCheckCircle,
+  FaRegFileAlt,
+} from "react-icons/fa";
+import { MdOutlineTask, MdAssignment } from "react-icons/md";
+import { FiUsers } from "react-icons/fi";
+import { FaBoxArchive } from "react-icons/fa6";
 
 export const AllFeatures = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("Dashboard");
+  const [activeTab, setActiveTab] = useState("Cleaning Schedule");
 
   useEffect(() => {
     window.scrollTo({
@@ -26,19 +27,36 @@ export const AllFeatures = () => {
 
   const features = [
     {
-      id: "Dashboard",
-      icon: <MdDashboard />,
+      id: "Cleaning Schedule",
+      icon: <FaRegFileAlt />,
       contents: [
         {
-          title: "Dashboard Monitoring",
-          subtitle: "Semua yang kamu butuhkan, ada di satu layar.",
-          image: "/features/Dashboard.png",
+          description:
+            "The master cleaning schedule manages cleaning service activities by work area. This feature displays a list of routine tasks in calendar format.",
+          image: "/features/feature1.PNG",
           list: [
-            "Jadwal tahunan terorganisir",
-            "Monitoring progress",
-            "Import dari Excel",
-            "Evaluasi mudah",
+            "Structured Annual Planning",
+            "Monitoring Progress",
+            "Import from Excel",
+            "Effortless Evaluation",
           ],
+        },
+      ],
+    },
+    {
+      id: "Logistic Request",
+      icon: <FaBoxArchive />,
+      contents: [
+        {
+          description:
+            "Manage the workflow of operational goods requests from sites in a more structured manner, starting from needs submission and approval process. With this feature, every request is clearly logged, its status can be monitored, and the distribution process becomes more transparent.",
+          image: "/features/feature2.jpg",
+          // list: [
+          //   "Structured Annual Planning",
+          //   "Monitoring Progress",
+          //   "Import from Excel",
+          //   "Effortless Evaluation",
+          // ],
         },
       ],
     },
@@ -47,66 +65,49 @@ export const AllFeatures = () => {
       icon: <MdAssignment />,
       contents: [
         {
-          title: "Direct Task",
-          // subtitle: "Penugasan instan tanpa hambatan.",
-          image: "/features/Direct Task.png",
-          list: [
-            // "Quick assign",
-            // "Notifikasi real-time",
-            // "Prioritas tugas",
-            // "Foto bukti kerja",
-          ],
+          description:
+            "This feature records additional work outside of the regular schedule. For  direct assignments or area with specific complaints. Users can view a list of additional tasks that need to be completed and immediately assign them to cleaning service staff.",
+          image: "/features/feature3.jpg",
+          // list: [
+          //   "Structured Annual Planning",
+          //   "Monitoring Progress",
+          //   "Import from Excel",
+          //   "Effortless Evaluation",
+          // ],
         },
       ],
     },
     {
-      id: "Inventory",
-      icon: <MdInventory />,
+      id: "Reliever",
+      icon: <FiUsers />,
       contents: [
         {
-          title: "Inventory",
-          // subtitle: "Kontrol stok alat dan bahan pembersih.",
-          image: "/features/Inventory.png",
-          list: [
-            //   "Update stok otomatis",
-            //   "Alert stok rendah",
-            //   "Riwayat pemakaian",
-            //   "Manajemen supplier",
-          ],
+          description:
+            "This feature manages substitute staff when primary staff members are unable to attend, ensuring that operations and work schedules continue without any gaps in staffing.",
+          image: ["/features/feature4.jpg", "/features/feature4-1.jpg"],
+          // list: [
+          //   "Structured Annual Planning",
+          //   "Monitoring Progress",
+          //   "Import from Excel",
+          //   "Effortless Evaluation",
+          // ],
         },
       ],
     },
     {
       id: "Stock Opname",
-      icon: <MdFactCheck />,
+      icon: <MdOutlineTask />,
       contents: [
         {
-          title: "Stock Opname",
-          // subtitle: "Audit stok jadi lebih cepat dan akurat.",
-          image: "/features/Stock Opname.png",
-          list: [
-            //   "Scan barcode",
-            //   "Rekonsiliasi data",
-            //   "Laporan selisih",
-            //   "Approval digital",
-          ],
-        },
-      ],
-    },
-    {
-      id: "Feedback",
-      icon: <MdFeedback />,
-      contents: [
-        {
-          title: "Feedback",
-          // subtitle: "Audit stok jadi lebih cepat dan akurat.",
-          image: "/features/Feedback.png",
-          list: [
-            //   "Scan barcode",
-            //   "Rekonsiliasi data",
-            //   "Laporan selisih",
-            //   "Approval digital",
-          ],
+          description:
+            "Monitor the availability of operational inventory more efficiently. This feature allows users to view available inventory levels, record outgoing items, and track inventory movement history.",
+          image: "/features/feature5.jpg",
+          // list: [
+          //   "Structured Annual Planning",
+          //   "Monitoring Progress",
+          //   "Import from Excel",
+          //   "Effortless Evaluation",
+          // ],
         },
       ],
     },
@@ -120,6 +121,31 @@ export const AllFeatures = () => {
       <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-sky-200 blur-[120px]" />
 
+      {/* Top Navigation */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex w-full items-center justify-between px-6 pt-6 lg:px-12 xl:px-8"
+      >
+        <button
+          onClick={() => navigate(-1)}
+          className="hover:bg-primary border-primary group flex cursor-pointer items-center gap-2 rounded-full border bg-white px-4 py-2 shadow-lg transition-all hover:scale-110 lg:gap-4 lg:px-8 lg:py-4 xl:gap-3 xl:px-6 xl:py-3"
+        >
+          <FaArrowLeft className="text-primary text-base group-hover:text-white lg:text-4xl xl:text-lg" />
+          <span className="text-primary text-sm font-bold uppercase group-hover:text-white lg:text-3xl xl:text-base">
+            Back
+          </span>
+        </button>
+
+        <button
+          onClick={() => navigate("/")}
+          className="bg-primary/10 text-primary hover:bg-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-12 xl:w-12"
+        >
+          <FaHome className="text-lg lg:text-5xl xl:text-xl" />
+        </button>
+      </motion.div>
+
       <div className="flex w-full max-w-7xl flex-col items-center">
         {/* Header Section */}
         <div className="px-10 py-6 text-center lg:py-20 xl:py-6">
@@ -127,7 +153,8 @@ export const AllFeatures = () => {
             All Features
           </h1>
           <p className="mt-4 text-sm font-semibold text-slate-500 lg:text-4xl xl:text-lg">
-            Jelajahi seluruh fitur SHELIA untuk mendukung operasional cleaning
+            A digital cleaning management system for full transparency,
+            efficiency, and quality control.
           </p>
         </div>
 
@@ -140,7 +167,7 @@ export const AllFeatures = () => {
           />
         </div>
 
-        {/* Content Section - Dinamis Kanan Kiri */}
+        {/* Content Section */}
         <div className="flex w-full items-center justify-center bg-slate-100 p-10">
           <AnimatePresence mode="wait">
             <motion.div
@@ -154,75 +181,51 @@ export const AllFeatures = () => {
               {currentData.contents.map((content, index) => (
                 <div
                   key={index}
-                  className={`flex w-full flex-col items-center gap-12 lg:gap-16 ${currentData.contents.length > 1 ? "lg:flex-row lg:justify-center" : "lg:flex-row lg:justify-center lg:gap-6"} ${index % 2 !== 0 && currentData.contents.length > 1 ? "lg:flex-row-reverse" : ""}`}
+                  className="flex w-full flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-4"
                 >
-                  {/* Phone Frame Section */}
+                  {/* LEFT - Phone Frame */}
                   <div className="flex w-full flex-1 justify-center">
-                    <div className="max-w-62.5 lg:max-w-100 xl:max-w-65 w-full">
+                    <div className="max-w-62.5 lg:max-w-100 w-full xl:max-w-80">
                       <PhoneFrame screenshot={content.image} />
                     </div>
                   </div>
 
-                  {/* Details Section */}
-                  <div className="w-full flex-1 space-y-4 text-left">
-                    <h2 className="text-primary text-4xl font-black leading-tight lg:text-7xl xl:text-5xl">
-                      {content.title}
+                  {/* RIGHT - Details */}
+                  <div className="w-full flex-1 space-y-5 text-left">
+                    {/* Title = activeTab */}
+                    <h2 className="text-primary text-4xl font-black leading-tight lg:text-8xl xl:text-5xl">
+                      {activeTab}
                     </h2>
-                    <p className="text-xl font-bold text-sky-400 lg:text-4xl xl:text-2xl">
-                      {content.subtitle}
+
+                    {/* Description */}
+                    <p className="text-justify text-sm font-semibold leading-relaxed text-slate-500 lg:text-4xl xl:text-base">
+                      {content.description}
                     </p>
 
-                    <div className="space-y-4 pt-4">
-                      {content.list.map((item, i) => (
-                        <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: i * 0.1 }}
-                          key={i}
-                          className="flex items-center gap-4 rounded-2xl border border-slate-300 bg-white p-4 shadow-sm lg:p-4 xl:p-4"
-                        >
-                          <FaCheckCircle className="text-primary text-lg lg:text-2xl xl:text-xl" />
-                          <span className="font-semibold text-black lg:text-3xl xl:text-lg">
-                            {item}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
+                    {/* List - hanya tampil jika ada */}
+                    {content.list && (
+                      <div className="space-y-3 pt-2">
+                        {content.list.map((item, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                          >
+                            <FaCheckCircle className="text-primary shrink-0 text-lg lg:text-2xl xl:text-xl" />
+                            <span className="text-sm font-semibold text-black lg:text-3xl xl:text-lg">
+                              {item}
+                            </span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        {/* Bottom Navigation */}
-        <div className="mt-16 flex w-full justify-center lg:mt-24 xl:mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex items-center gap-6 p-3 lg:gap-8 lg:p-6 xl:gap-4 xl:p-4"
-          >
-            <button
-              onClick={() => navigate(-1)}
-              className="group flex cursor-pointer items-center gap-4 rounded-full border border-slate-100 bg-white px-6 py-2 shadow-lg transition-all hover:scale-110 hover:bg-slate-50 lg:px-12 lg:py-8 xl:px-4 xl:py-4"
-            >
-              <FaArrowLeft className="group-hover:text-primary text-lg text-slate-500 lg:text-4xl xl:text-xl" />
-              <span className="group-hover:text-primary text-sm font-bold uppercase text-slate-500 lg:text-2xl xl:text-base">
-                Kembali
-              </span>
-            </button>
-
-            <div className="h-8 w-1 bg-slate-200 lg:h-16" />
-
-            <button
-              onClick={() => navigate("/")}
-              className="bg-primary/10 text-primary hover:bg-primary flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:text-white lg:h-24 lg:w-24 xl:h-14 xl:w-14"
-            >
-              <FaHome className="text-xl lg:text-5xl xl:text-2xl" />
-            </button>
-          </motion.div>
         </div>
       </div>
     </div>

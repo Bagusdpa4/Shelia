@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Pages
 import { Homepage } from "../pages/Homepage";
 import { Menu } from "../pages/templates/Menu";
+import { WhatIs } from "../pages/features/WhatIs";
 import { HowItWorks } from "../pages/features/HowItWorks";
 import { AllFeatures } from "../pages/features/AllFeatures";
-import { DashboardPreview } from "../pages/features/DashboardPreview";
 import { RequestDemo } from "../pages/features/RequestDemo";
 import { Error404 } from "../pages/errors/Error404";
 
@@ -27,9 +27,9 @@ export const App = () => {
           <Route path="/menu" element={<Menu />} />
 
           {/* Features */}
+          <Route path="/what-is" element={<WhatIs />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/all-features" element={<AllFeatures />} />
-          <Route path="/dashboard-preview" element={<DashboardPreview />} />
           <Route path="/req-demo" element={<RequestDemo />} />
 
           {/* Error */}

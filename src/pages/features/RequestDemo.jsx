@@ -17,7 +17,7 @@ export const RequestDemo = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 mb-8 flex w-full items-center justify-between lg:mb-16 xl:mb-12"
+        className="relative z-10 mb-8 flex w-full items-center justify-between lg:mb-16 xl:mb-10"
       >
         {/* Tombol Kembali - kiri atas */}
         <button
@@ -47,16 +47,16 @@ export const RequestDemo = () => {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="relative z-10 flex flex-col items-center text-center"
       >
-        <div className="mb-12 mt-10 flex w-full justify-center lg:mb-20 xl:mb-16">
-          <h1 className="text-primary text-2xl font-black uppercase tracking-tight lg:text-8xl xl:text-3xl">
+        <div className="mb-12 mt-0 lg:mt-20 xl:mt-0 flex w-full justify-center lg:mb-20 xl:mb-6">
+          <h1 className="text-primary text-2xl font-black tracking-tight lg:text-8xl xl:text-3xl">
             Shelter Cleaning
           </h1>
         </div>
 
         {/* Main Container */}
-        <div className="mb-10 text-center lg:mb-20 xl:mb-16">
+        <div className="mb-10 text-center lg:mb-20 xl:mb-12">
           <h1 className="text-2xl font-black uppercase tracking-tight text-sky-500 lg:text-6xl xl:text-3xl">
-            Request Demo
+            Demo Request
           </h1>
           <p className="mt-4 text-sm font-semibold text-black lg:mt-8 lg:text-4xl xl:mt-2 xl:text-lg">
             Ready to transform your operations? Book a demo with our experts to
@@ -82,21 +82,6 @@ export const RequestDemo = () => {
           <span className="mt-6 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 lg:mt-10 lg:text-3xl xl:text-sm">
             Scan with your camera app
           </span>
-        </div>
-
-        {/* Sales Contact Card */}
-        <div className="mt-12 flex w-full max-w-sm items-center gap-4 rounded-2xl border border-slate-100 bg-[#DFE0FF] p-4 text-left lg:mt-20 lg:max-w-6xl lg:gap-8 lg:p-8 xl:mt-10 xl:max-w-md xl:gap-4 xl:p-4">
-          <div className="bg-primary lg:h-30 lg:w-30 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white lg:rounded-full xl:h-12 xl:w-12">
-            <FaPhoneAlt className="text-sm lg:text-5xl xl:text-lg" />
-          </div>
-          <div>
-            <h4 className="text-primary text-[10px] font-bold lg:text-3xl xl:text-sm">
-              Or speak directly with our sales representative
-            </h4>
-            <p className="text-[9px] font-medium text-black lg:text-3xl xl:text-[11px]">
-              Our team is happy to give you a live walkthrough of the platform.
-            </p>
-          </div>
         </div>
       </motion.div>
     </div>
