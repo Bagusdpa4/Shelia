@@ -74,29 +74,29 @@ export const Menu = () => {
 
         {/* List Menu */}
         <div className="flex flex-col gap-0 lg:gap-10 xl:gap-4">
-          {menuItems.map((item, index) => (
+        {menuItems.map((item, index) => (
             <motion.button
               key={index}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate(item.path)}
-              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-300 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-[3rem] lg:p-8 xl:rounded-[2rem] xl:p-4"
+              className="group flex w-full cursor-pointer items-center justify-between rounded-[1.5rem] border border-slate-400 bg-white p-4 shadow-xl transition-all hover:shadow-md lg:rounded-full lg:p-8 xl:rounded-[2rem] xl:p-5"
             >
-              <div className="flex items-center gap-4 lg:gap-8 xl:gap-0">
+              <div className="flex items-center gap-4 lg:gap-8 xl:gap-6">
                 <div
-                  className={`lg:h-30 flex h-10 w-10 items-center justify-center rounded-xl lg:w-32 xl:h-10 xl:w-16 ${item.bgIcon}`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full lg:h-24 lg:w-24 xl:h-12 xl:w-12 ${item.bgIcon}`}
                 >
                   {React.cloneElement(item.icon, {
-                    className: "text-lg xl:text-2xl text-primary lg:text-7xl",
+                    className: "text-lg xl:text-2xl text-primary lg:text-6xl",
                   })}
                 </div>
-                <div className="space-0 px-4 text-left lg:space-y-4 xl:space-y-1">
+                <div className="text-left">
                   <h3 className="text-base font-bold text-black lg:text-5xl lg:font-bold xl:text-lg xl:font-bold">
                     {item.title}
                   </h3>
                 </div>
               </div>
-              <HiChevronRight className="hidden text-slate-400 lg:block lg:text-7xl xl:block xl:text-3xl" />
+              <FaArrowRight className="text-primary hidden lg:block lg:text-4xl xl:block xl:text-2xl" />
             </motion.button>
           ))}
         </div>
