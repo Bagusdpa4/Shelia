@@ -93,7 +93,7 @@ export const WhatIs = () => {
               <p className="text-primary text-base font-bold leading-tight lg:text-4xl xl:text-lg">
                 Solutions for Managing Cleaning Service Operations
               </p>
-              <p className="mt-2 max-w-sm text-justify text-sm font-semibold leading-relaxed text-slate-500 lg:max-w-120 lg:text-3xl xl:max-w-xl xl:text-xl">
+              <p className="lg:max-w-120 mt-2 max-w-sm text-justify text-sm font-semibold leading-relaxed text-slate-500 lg:text-3xl xl:max-w-xl xl:text-xl">
                 A app that can helps companies ensure their cleaning services
                 are not only carried out but also properly managed, documented,
                 and maintained at a consistent quality level.
@@ -203,7 +203,7 @@ export const WhatIs = () => {
             <span className="text-xs font-semibold uppercase tracking-widest text-slate-500 lg:text-3xl xl:text-base">
               Core Pillars
             </span>
-            <div className="space-y-3 pt-2">
+            <div className="space-y-6 pt-10">
               {coreValues.map((item, index) => (
                 <motion.div
                   key={index}
@@ -215,20 +215,20 @@ export const WhatIs = () => {
                     duration: 0.4,
                     ease: "easeOut",
                   }}
-                  className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 py-4 shadow-sm"
+                  className="flex items-center gap-4 rounded-2xl border border-slate-400 bg-white px-5 py-6 shadow-xl"
                 >
                   <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-xl lg:h-20 lg:w-20 xl:h-12 xl:w-12 ${item.bgIcon}`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-xl lg:h-24 lg:w-24 xl:h-12 xl:w-12 ${item.bgIcon}`}
                   >
                     {React.cloneElement(item.icon, {
-                      className: "text-lg lg:text-5xl xl:text-3xl text-black",
+                      className: "text-lg lg:text-6xl xl:text-3xl text-black",
                     })}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <p className="text-primary text-sm font-bold lg:text-4xl xl:text-2xl">
+                    <p className="text-primary text-sm font-bold lg:text-5xl xl:text-2xl">
                       {item.title}
                     </p>
-                    <p className="text-semibold text-sm leading-snug text-slate-500 lg:text-[34px] xl:text-lg">
+                    <p className="text-bold text-sm leading-snug text-slate-500 lg:text-4xl xl:text-lg">
                       {item.description}
                     </p>
                   </div>
