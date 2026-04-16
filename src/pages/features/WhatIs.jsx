@@ -200,7 +200,7 @@ export const WhatIs = () => {
 
           {/* CORE PILLARS */}
           <section className="space-y-4 rounded-2xl bg-slate-100 p-6">
-            <span className="text-xs font-semibold uppercase tracking-widest text-slate-500 lg:text-3xl xl:text-base">
+            <span className="text-xs font-semibold uppercase tracking-widest text-slate-500 lg:text-4xl xl:text-base">
               Core Pillars
             </span>
             <div className="space-y-6 pt-10">
@@ -215,7 +215,7 @@ export const WhatIs = () => {
                     duration: 0.4,
                     ease: "easeOut",
                   }}
-                  className="flex items-center gap-4 rounded-2xl border border-slate-400 bg-white px-5 py-6 shadow-xl"
+                  className="flex items-center gap-8 rounded-2xl border border-slate-400 bg-white px-5 py-6 shadow-xl"
                 >
                   <div
                     className={`flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-xl lg:h-24 lg:w-24 xl:h-12 xl:w-12 ${item.bgIcon}`}
