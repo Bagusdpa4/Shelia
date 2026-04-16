@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHome, FaRegLightbulb } from "react-icons/fa";
+import { FaArrowRight, FaHome, FaRegLightbulb } from "react-icons/fa";
 import { IoGridOutline, IoRocketOutline } from "react-icons/io5";
 import { FaArrowLeft } from "react-icons/fa6";
-import { HiChevronRight } from "react-icons/hi";
 import { PiBroom } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
